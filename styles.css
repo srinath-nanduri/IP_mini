@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: rgb(255, 251, 0);
+}
+
+.card{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.form-group{
+    color: white;
+}
