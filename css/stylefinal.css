@@ -588,12 +588,16 @@ button,
   transition: all 0.3s;
 }
 .vincent_image_logo {
-  margin-top: -80px;
-  width: 143px;
-  height: 200px;
+  /* margin-top: -50px; */
+  /* width: 143px;
+  height: 200px; */
+  width: 150px;
+  height: 72px;
   display: inline-block;
-  background: url('D:/IP_mini/IP_mini/assets/logo/Logopit_1604724958066.png') 0 0 no-repeat transparent;
-  background-size: 143px 200px;
+  /* background: url('D:/IP_mini/IP_mini/assets/logo/Logopit_1604724958066.png') 0 0 no-repeat transparent; */ 
+  /* background-size: 143px 200px; */
+  background: url('D:/IP_mini/IP_mini/assets/logo/logo.png') 0 0 no-repeat transparent;
+  background-size: 150px 72px;
 }
 .vincent_logo_cont {
   padding: 55px 0 45px 0;
