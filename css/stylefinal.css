@@ -596,7 +596,7 @@ button,
   display: inline-block;
   /* background: url('D:/IP_mini/IP_mini/assets/logo/Logopit_1604724958066.png') 0 0 no-repeat transparent; */ 
   /* background-size: 143px 200px; */
-  background: url('D:/IP_mini/IP_mini/assets/logo/logo.png') 0 0 no-repeat transparent;
+  background: url('../assets/logo/logo.png') 0 0 no-repeat transparent;
   background-size: 150px 72px;
 }
 .vincent_logo_cont {
