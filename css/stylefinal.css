@@ -743,7 +743,7 @@ button,
   width: 176px;
   height: 159px;
   display: block;
-  background: url('D:/IP_mini/IP_mini/assets/logo/Logopit_1604724958066.png') 0 0 no-repeat transparent;
+  background: url('../assets/logo/Logopit_1604724958066.png') 0 0 no-repeat transparent;
   background-size: 176px 159px;
 }
 .btn_mobile_menu {
@@ -967,6 +967,7 @@ button,
   margin-right: auto;
   margin-left: 0;
 }
+
 .vincent_slider_main_item1 .vincent_slider_main_item_img {
   margin-right: 0;
   padding-top: 60px;
@@ -1295,7 +1296,7 @@ button,
   position: relative;
   margin-top: 21px;
   margin-bottom: 23px;
-  background-image: url('D:/IP_mini/IP_mini/assets/pizza-pizza-hut-cooking-kitchen.jpg');
+  background-image: url('../assets/pizza-pizza-hut-cooking-kitchen.jpg');
 }
 .vincent_title_block:before {
   background-color: rgba(255, 200, 81, 0.9);
@@ -1440,7 +1441,7 @@ footer {
   width: 176px;
   height: 159px;
   display: inline-block;
-  background: url("D:/IP_mini/IP_mini/assets/logo/Logopit_1604724958066.png") 0 0 no-repeat transparent;
+  background: url("../assets/logo/Logopit_1604724958066.png") 0 0 no-repeat transparent;
   background-size: 176px 159px;
 }
 footer .vincent_logo_cont {
@@ -2202,10 +2203,10 @@ footer .vincent_logo_cont {
   height: 100%;
 }
 .vincent_philosophy_img1 {
-  background-image: url('D:/IP_mini/IP_mini/assets/depositphotos_83559588-stock-photo-people-holding-beer-and-eating.jpg');
+  background-image: url('../assets/depositphotos_83559588-stock-photo-people-holding-beer-and-eating.jpg');
 }
 .vincent_philosophy_img2 {
-  background-image: url('D:/IP_mini/IP_mini/assets/pizza-photography-5.jpg');
+  background-image: url('../assets/pizza-photography-5.jpg');
 }
 .vincent_collapse_block {
   padding: 75px 0 53px 0;
