@@ -540,5 +540,20 @@ input[type='checkbox']:not(old):checked + label > span:before {
 
 
 
+
+.tog{
+  cursor:pointer;
+  user-select:none;
+}
+
+
+
+
+
+
+
+
+
+
 /*# sourceMappingURL=style.css.map */
 /* <span style="font-family:impact,impact-w01-2010,impact-w02-2010,impact-w10-2010,sans-serif;">LIMITLESS</span> */

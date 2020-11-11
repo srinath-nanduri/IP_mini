@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +7,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Fullscreen Gallery - Limitless</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/kube.css">
+	<title>Home 1 - Vincent</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link href="https://mdbootstrap.com/previews/docs/latest/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://mdbootstrap.com/previews/docs/latest/css/mdb.min.css" rel="stylesheet" />
+
+  <link href="https://mdbootstrap.com/previews/docs/latest/html/fsscroller/css/style.css" rel="stylesheet" />
+
+  <link href="https://mdbootstrap.com/previews/docs/latest/html/fsscroller/css/fsscroller.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/kube.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/font-awesome.css"> -->
 	<link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/owl.carousel.min.css">
 	<link rel="stylesheet"  href="css/stylefinal.css">
@@ -22,18 +32,54 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5G6PPWB');</script>
   <!-- End Google Tag Manager -->
+  <script >
+	function myFunction()
+{
+    var x = document.getElementById("password");
+    var y = document.getElementById("togpass");
+    if (x.type === "password") 
+    {
+        x.type = "text";
+        y.className = "fas fa-eye-slash";
+    }
+    else
+    {
+        x.type="password";
+        y.className = "fas fa-eye";
+    }
+}
+
+
+function myFunction1()
+{
+    var x = document.getElementById("cpassword");
+    var y = document.getElementById("togcpass");
+    if (x.type === "password") 
+    {
+        x.type = "text";
+        y.className = "fas fa-eye-slash";
+    }
+    else
+    {
+        x.type="password";
+        y.className = "fas fa-eye";
+    }
+}
+
+
+  </script>
 </head>
-<body class="vincent_home6 vincent_fullscreen_gallery" style="background-image: url(assets/photo-1513104890138-7c749659a591.jpeg); background-repeat: no-repeat;background-size: cover; " >
-	<header class="vincent_header vincent_absolute">
+<body class="vincent_home6 vincent_home1" >
+	<header class="vincent_header" style="padding-top:-450px">
 		<div class="row ">
-			<!-- <div class="col col-3 vincent_header_left"> -->
-				<!-- <div class="vincent_inner">
+			<!-- <div class="col col-3 vincent_header_left">
+				<div class="vincent_inner">
 					<div class="vincent_inner_h_contact">
-						<div class="vincent_h_phone">+1 215 456 15 15</div>
+						<div class="vincent_h_phone">+91 9345678765</div>
 						<div class="vincent_h_wh">8:00 am – 11:30 pm</div>
 					</div>
-				</div> -->
-			<!-- </div> -->
+				</div>
+			</div> -->
 			<div class="col col-6 vincent_header_center">
 				<div class="vincent_def_header">
 					<!-- <div class="vincent_logo_cont">
@@ -42,15 +88,15 @@
 					</div> -->
 					<nav class="vincent_menu_cont">
 						<ul id="menu-main-menu" class="vincent_menu">
-							<li class="menu-item menu-item-has-children">
-								<div class="vincent_logo_cont">
-									<a href="c.html" class="vincent_image_logo">
-									</a>
-								</div>
-							</li>
-							<li class="menu-item menu-item-has-children"><a href="c.html">Home</a>
+						<li>
+												<div class="vincent_logo_cont">
+						<a href="c.html" class="vincent_image_logo">
+						</a>
+					</div>
+						</li>
+							<li class="menu-item active menu-item-has-children"><a href="c.html">Home</a>
 								<!-- <ul class="sub-menu">
-									<li class="menu-item"><a href="index.html">Home 1</a></li>
+									<li class="menu-item vincent_sub_menu_active"><a href="c.html">Home 1</a></li>
 									<li class="menu-item"><a href="home2.html">Home 2</a></li>
 									<li class="menu-item"><a href="home3.html">Home 3</a></li>
 									<li class="menu-item"><a href="home4.html">Home 4</a></li>
@@ -65,16 +111,16 @@
 									<li class="menu-item"><a href="menu3.html">Menu 3</a></li>
 								</ul>
 							</li> -->
-							<li class=" menu-item  active menu-item-has-children"><a href="#">Features</a>
+							<li class=" menu-item menu-item-has-children"><a href="#">Features</a>
 								<ul class="sub-menu">
-									<!-- <li class="menu-item"><a href="typography.html">Typography</a></li> -->
-									<li class="menu-item vincent_sub_menu_active"><a href="#">Fullscreen Gallery</a></li>
+									<!-- <li class="menu-item "><a href="typography.html">Typography</a></li> -->
+									<li class="menu-item"><a href="gal.html">Fullscreen Gallery</a></li>
 									<!-- <li class="menu-item"><a href="404.html">Error 404 Page</a></li> -->
 								</ul>
 							</li>
 							<li class="menu-item menu-item-has-children"><a href="#">About</a>
 								<ul class="sub-menu">
-									<li class="menu-item"><a href="about1.html">Customer Service</a></li>
+									<li class="menu-item"><a href="about1.html">Customer Review</a></li>
 									<!-- <li class="menu-item"><a href="about2.html">About 2</a></li> -->
 									<li class="menu-item"><a href="teams.html">Team</a></li>
 								</ul>
@@ -128,7 +174,7 @@
 				<div class="vincent_inner">
 					<a href="cart.html">
 						<div class="vincent_shopping_cart">
-							<div class="vincent_total_price">&#8377;0.00</div>
+							<div class="vincent_total_price">$0.00</div>
 							<div class="vincent_total_items">0 items - View Cart</div>
 							<div class="vincent_cart_item_counter">0</div>
 						</div>
@@ -137,65 +183,54 @@
 			</div> -->
 		</div>
 	</header>
-	
-		<div class="row" style="margin-top: -90px;">
-			<div class="col col-12 vincent_content">
-				<div class="owl-carousel vincent_slider1i vincent_slider_main vincent_slider_gallery">
-					<div class="owl-item vincent_slider_main_item">
-						<div class="vincent_slider_main_item_img" >
-							<div class=""><img src="assets/gallery3/03.jpg" alt=""></div>
-						</div>
-						<!-- <h1>Margherita</h1>
-						<div class="vincent_slider_main_item_text">Neapolitan Pizza With San Marzano<br> Tomatoes and Mozzarella Cheese.</div> -->
-					</div>
-					<div class="owl-item vincent_slider_main_item">
-						<div class="vincent_slider_main_item_img">
-							<div class=""><img src="assets/gallery3/05.jpg" alt=""></div>
-						</div>
-						<!-- <h1>Pepperony</h1> -->
-						<!-- <div class="vincent_slider_main_item_text">Italian Pizza With Pepperoni, Tomato<br> Sauce and Mozzarella Cheese.</div> -->
-					</div>
-					<div class="owl-item vincent_slider_main_item">
-						<div class="vincent_slider_main_item_img">
-							<div class=""><img src="assets/gallery3/10.jpg" alt=""></div>
-						</div>
-						<!-- <h1>Vincent</h1> -->
-						<!-- <div class="vincent_slider_main_item_text">Italian Pizza With Cherry Tomatoes<br> and Green Basil</div> -->
-          </div>
-          <div class="owl-item vincent_slider_main_item">
-						<div class="vincent_slider_main_item_img">
-							<div class=""><img src="assets/gallery3/02.jpg" alt=""></div>
-						</div>
-						<!-- <h1>Vincent</h1> -->
-						<!-- <div class="vincent_slider_main_item_text">Italian Pizza With Cherry Tomatoes<br> and Green Basil</div> -->
-          </div>
-          <div class="owl-item vincent_slider_main_item">
-						<div class="vincent_slider_main_item_img">
-							<div class=""><img src="assets/gallery3/04.jpg" alt=""></div>
-						</div>
-						<!-- <h1>Vincent</h1> -->
-						<!-- <div class="vincent_slider_main_item_text">Italian Pizza With Cherry Tomatoes<br> and Green Basil</div> -->
-          </div>
-          <div class="owl-item vincent_slider_main_item">
-						<div class="vincent_slider_main_item_img">
-							<div class=""><img src="assets/gallery3/09.jpg" alt=""></div>
-						</div>
-						<!-- <h1>Vincent</h1> -->
-						<!-- <div class="vincent_slider_main_item_text">Italian Pizza With Cherry Tomatoes<br> and Green Basil</div> -->
-          </div>
-          <div class="owl-nav"><div class="owl-prev"></div><div class="owl-next"></div></div>
-          <div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div>
-				</div>
-		</div>
-  </div>
-  
 
-  
+
+					<div class="main" style="margin-top:-100px;">
+
+            <div class="container1" style="padding-bottom:30px;" >
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h2>Sign up </h2>
+                        <!-- <p class="desc" style="color: #fff;">to get discount 10% </p> -->
+                        <div class="form-group">
+                            <input type="text" required class="form-input" name="name" id="name" placeholder="Your Full Name"/>
+                        </div>
+						<div class="form-group">
+                            <input type="text" required class="form-input" name="username" id="username" placeholder="Username"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" required class="form-input" name="email" id="email" placeholder="Email"/>
+                        </div>
+                        <div class="form-group">
+
+							<input type="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include atleast 1 uppercase character, 1 lowercase character, and 1 number." required class="form-input" name="password" id="password" placeholder="Password"/>
+							<span class="tog" onclick="myFunction()"><i id="togpass" class="fas fa-eye"></i>Show Password</span> 
+							
+                        </div>
+                        <div class="form-group">
+
+							<input type="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required class="form-input" name="cpassword" id="cpassword" placeholder="Confirm Password"/>
+							<span class="tog" onclick="myFunction1()"><i id="togcpass" class="fas fa-eye"></i>Show Password</span> 
+                        
+						</div>
+						
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
+                            <a href="signin.html" class="submit-link submit">Sign in</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+				
+			
   <script src="https://demo-storage.com/pm/html/vincent/js/jquery-3.2.1.min.js"></script>
-  <!-- <script src="https://demo-storage.com/pm/html/vincent/js/jquery.data-parallax.min.js"></script> -->
-  <script src="https://demo-storage.com/pm/html/vincent/js/owl.carousel.min.js"></script>
-	<!-- <script src="https://demo-storage.com/pm/html/vincent/js/owl.carousel.min.js"></script> -->
-	<!-- <script src="https://demo-storage.com/pm/html/vincent/js/kube.js"></script> -->
+	<script src="https://demo-storage.com/pm/html/vincent/js/jquery.data-parallax.min.js"></script>
+	<script src="https://demo-storage.com/pm/html/vincent/js/owl.carousel.min.js"></script>
+	<script src="https://demo-storage.com/pm/html/vincent/js/kube.js"></script>
 	<script src="https://demo-storage.com/pm/html/vincent/js/index.js"></script>
 </body>
 </html>
