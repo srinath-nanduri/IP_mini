@@ -2193,6 +2193,8 @@ footer .vincent_logo_cont {
 }
 .vincent_philosophy_img1,
 .vincent_philosophy_img2,
+.vincent_philosophy_img3,
+.vincent_philosophy_img4,
 .vincent_collapse_item_content,
 .vincent_block_2col_img {
   overflow: hidden;
@@ -2203,10 +2205,16 @@ footer .vincent_logo_cont {
   height: 100%;
 }
 .vincent_philosophy_img1 {
-  background-image: url('../assets/depositphotos_83559588-stock-photo-people-holding-beer-and-eating.jpg');
+  background-image: url('../assets/team3.jpg');
 }
 .vincent_philosophy_img2 {
-  background-image: url('../assets/pizza-photography-5.jpg');
+  background-image: url('../assets/team1.jpg');
+}
+.vincent_philosophy_img3{
+  background-image: url('../assets/order/now.jpg');
+}
+.vincent_philosophy_img4{
+  background-image: url('../assets/order/now1.jpg');
 }
 .vincent_collapse_block {
   padding: 75px 0 53px 0;
@@ -5207,3 +5215,16 @@ tfoot td {
    display: block;
    width: fit-content; margin: 0 auto;
  }
+
+
+
+
+
+ #pizzaa{
+  /*   background: #6A1B9A; */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

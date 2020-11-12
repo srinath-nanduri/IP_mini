@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+if(($_SESSION["user"])){
+    
+
+
+
+
+?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +40,19 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" 
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
   crossorigin="anonymous"></script>
+  <!-- <script src="loader.js"></script>
+  <script>
+	  $( document ).ready(function() {
+  // Handler for .ready() called.
+  $('.vincent_philosophy_img3').load(function(){
+     $('.pizzaa').hide();
+  });
+});
+  </script> -->
 </head>
 
 <body class="vincent_team_page">
+
 	<header class="vincent_header">
 		<div class="row ">
 			<!-- <div class="col col-3 vincent_header_left">
@@ -77,11 +101,10 @@
 									<!-- <li class="menu-item"><a href="404.html">Error 404 Page</a></li> -->
 								</ul>
 							</li>
-							<li class="menu-item active menu-item-has-children"><a href="#">About</a>
+							<li class="menu-item menu-item-has-children"><a href="#">About</a>
 								<ul class="sub-menu">
 									<li class="menu-item"><a href="about1.html">Customer Review</a></li>
-									<!-- <li class="menu-item"><a href="about2.html">About 2</a></li> -->
-									<li class="menu-item vincent_sub_menu_active"><a href="teams.html">Team</a></li>
+									<li class="menu-item "><a href="teams.html">Team</a></li>
 								</ul>
 							</li>
 							<!-- <li class="menu-item menu-item-has-children"><a href="#">Blog</a>
@@ -136,7 +159,7 @@
 							<div class="vincent_total_price">$0.00</div>
 							<div class="vincent_total_items">0 items - View Cart</div>
 							<div class="vincent_cart_item_counter">0</div>
-						</div> --> Welcome, User
+						</div> --> Welcome, <?php echo $_SESSION['user']; ?>
 					</a>
 				</div>
 			</div>
@@ -154,7 +177,7 @@
        <div class="vincent_philosophy">
         <div class="row">
          <div class="col col-4">
-        <div class="vincent_advantages_dark_img vincent_philosophy_img1"></div>
+        <div class="vincent_advantages_dark_img vincent_philosophy_img3"></div>
         </div>
         <div class="col col-4">
         <div class="vincent_philosophy_item">
@@ -166,7 +189,7 @@
         </div>
         </div>
         <div class="col col-4">
-        <div class="vincent_advantages_dark_img vincent_philosophy_img2"></div>
+        <div class="vincent_advantages_dark_img vincent_philosophy_img4"></div>
         </div>
       </div>
 </div>
@@ -206,7 +229,7 @@
 </div> -->
 <br>
 <div class="vincent_container">
-	<form action="order.php" method="POST" class="lalala">
+	<form action="backend/order.php" method="POST" class="lalala">
 		<!-- <input type="text" placeholder="HIiiiiiiiiiiiiii" required>
 		<textarea></textarea> --><br>
 		<h1 style="text-align: center;">Choose your options!</h1>
@@ -410,10 +433,10 @@ $(".same input[name='sauceradio']").click(function(){
 					<ul class="vincent_foter_menu">
 						<li><a href="c.html">Home</a></li>
 						<!-- <li><a href="menu1.html">Menu</a></li> -->
-						<li><a href="fullscreen-gallery.html">Features</a></li>
+						<li><a href="gal.html">Features</a></li>
 						<li><a href="about1.html">About</a></li>
 						<!-- <li><a href="blog-grid.html">Blog</a></li> -->
-						<li><a href="contact-multiple-maps.html">Contact</a></li>
+						<li><a href="feedback.html">Contact</a></li>
 					</ul>
 					<ul class="vincent_social">
 						<li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -436,3 +459,13 @@ $(".same input[name='sauceradio']").click(function(){
 </body>
 
 </html>
+
+<?php 
+
+}
+
+else{
+    echo "<script>window.location.href='signin.html'</script>";
+}
+
+?>

@@ -76,7 +76,7 @@
 						</a>
 					</div>
 						</li>
-							<li class="menu-item active menu-item-has-children"><a href="c.html">Home</a>
+							<li class="menu-item"><a href="c.html">Home</a>
 								<!-- <ul class="sub-menu">
 									<li class="menu-item vincent_sub_menu_active"><a href="c.html">Home 1</a></li>
 									<li class="menu-item"><a href="home2.html">Home 2</a></li>
@@ -133,11 +133,6 @@
 								</ul>
 							</li> -->
 							<li class="menu-item menu-item-has-children"><a href="feedback.html">Contact</a>
-								<!-- <ul class="sub-menu">
-									<li class="menu-item"><a href="contact-w-sidebar.html">Contact with Sidebar</a></li>
-									<li class="menu-item"><a href="contact-w-gallery.html">Contact with Gallery</a></li>
-									<li class="menu-item"><a href="contact-multiple-maps.html">With Multiple Maps</a></li>
-								</ul> -->
 							</li>
 						</ul>
 					</nav>
@@ -205,15 +200,15 @@
 
             <div class="container1">
                 <div class="signup-content">
-                    <form method="POST" id="signup-form" class="signup-form">
+                    <form action="backend/login.php" method="POST" id="signup-form" class="signup-form">
                         <h2>Sign in </h2>
                         
                         <div class="form-group">
-                            <input type="text" required class="form-input" name="name" id="name" placeholder="Username"/>
+                            <input type="text" required class="form-input" name="username" id="username" placeholder="Username"/>
                         </div>
                         
                         <div class="form-group">
-							<input type="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include atleast 1 uppercase character, 1 lowercase character, and 1 number." required class="form-input" name="password" id="password" placeholder="Password"/>
+							<input type="password" minlength="8" required class="form-input" name="password" id="password" placeholder="Password"/>
 							<span class="tog" onclick="myFunction()"><i id="togpass" class="fas fa-eye"></i>Show Password</span> 
                             <!-- <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span> -->
                         </div>
@@ -226,9 +221,11 @@
                 </div>
             </div>
     
-        </div>
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="js/main.js"></script>
+		</div>
+		
+
+        <!-- <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script> -->
 				
 			
   <script src="https://demo-storage.com/pm/html/vincent/js/jquery-3.2.1.min.js"></script>
