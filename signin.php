@@ -1,3 +1,23 @@
+
+<?php 
+
+
+
+session_start();
+
+if(isset($_SESSION["user"])){
+ 
+	echo "<script>window.location.href='orderpage.php'</script>";
+
+}
+
+else{
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -235,3 +255,8 @@
 	<script src="https://demo-storage.com/pm/html/vincent/js/index.js"></script>
 </body>
 </html>
+
+
+<?php  
+}
+?>

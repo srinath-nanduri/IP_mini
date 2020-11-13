@@ -5215,16 +5215,3 @@ tfoot td {
    display: block;
    width: fit-content; margin: 0 auto;
  }
-
-
-
-
-
- #pizzaa{
-  /*   background: #6A1B9A; */
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }

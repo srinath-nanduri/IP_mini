@@ -52,7 +52,7 @@ if ($conn->connect_error) {
                 
                 // echo "HELLO!!!";
 
-                echo "<script>window.location.href='orderpage.php'</script>";
+                echo "<script>window.location.href='../orderpage.php'</script>";
             
             
             
