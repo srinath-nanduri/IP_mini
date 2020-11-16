@@ -107,31 +107,9 @@ if(isset($_SESSION["user"])){
 									<li class="menu-item "><a href="teams.html">Team</a></li>
 								</ul>
 							</li>
-							<!-- <li class="menu-item menu-item-has-children"><a href="#">Blog</a>
-								<ul class="sub-menu">
-									<li class="menu-item"><a href="blog-fullscreen.html">Blog Fullscreen</a></li>
-									<li class="menu-item"><a href="blog-grid.html">Blog Grid</a></li>
-									<li class="menu-item"><a href="blog-standard.html">Blog Standard</a></li>
-									<li class="menu-item menu-item-has-children"><a href="#">Single Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
-										<!-- <ul class=" sub-menu1">
-											<li class="menu-item"><a href="standard-post.html">Standard Post</a></li>
-											<li class="menu-item"><a href="image-post.html">Image Post</a></li>
-											<li class="menu-item"><a href="video-post.html">Video Post</a></li>
-											<li class="menu-item"><a href="audio-post.html">Audio Post</a></li>
-											<li class="menu-item"><a href="qoute-post.html">Quote Post</a></li>
-											<li class="menu-item"><a href="link-post.html">Link Post</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li> -->
-							<!-- <li class="menu-item menu-item-has-children"><a href="#">Shop</a>
-								<ul class="sub-menu">
-									<li class="menu-item"><a href="product-listing.html">Product Listing</a></li>
-									<li class="menu-item"><a href="single-product.html">Single Product</a></li>
-									<li class="menu-item"><a href="cart.html">Cart</a></li>
-									<li class="menu-item"><a href="checkout.html">Checkout</a></li>
-								</ul>
-							</li> -->
+							
+							<li class="menu-item menu-item-has-children"><a href="cart.php">Cart</a>
+
 							<li class="menu-item menu-item-has-children"><a href="feedback.html">Contact</a>
 								<!-- <ul class="sub-menu">
 									<li class="menu-item"><a href="contact-w-sidebar.html">Contact with Sidebar</a></li>
@@ -292,12 +270,12 @@ if(isset($_SESSION["user"])){
 	<br> -->
 	<div class="new">
 		<label class="same">
-			<input type="radio" name="sauceradio" value="nos" checked>
+			<input type="radio" name="sauceradio" value="nosauce" checked>
 			<img src="assets/order/no-sauce.jpg">
 			<p>NO SAUCE</p>
 		</label>
 		<label class="same">
-			<input type="radio" name="sauceradio" value="tomato">
+			<input type="radio" name="sauceradio" value="sauce">
 			<img src="assets/order/tomato.jpg">
 			<p>TOMATO SAUCE</p>
 		</label>
@@ -314,7 +292,7 @@ if(isset($_SESSION["user"])){
 
 	<div class="new">
 		<label class="same">
-			<input type="radio" name="cheeseradio" value="noc" checked>
+			<input type="radio" name="cheeseradio" value="nocheese" checked>
 			<img src="assets/order/no-cheese.jpg">
 			<p>NO CHEESE</p>
 		</label>
@@ -324,7 +302,7 @@ if(isset($_SESSION["user"])){
 			<p>CHEESE</p>
 		</label>
 		<label class="same">
-			<input type="radio" name="cheeseradio" value="double">
+			<input type="radio" name="cheeseradio" value="doublecheese">
 			<img src="assets/order/double.jpg">
 			<p>DOUBLE CHEESE</p>
 		</label>
@@ -335,7 +313,7 @@ if(isset($_SESSION["user"])){
 	</div>
 
 <div class="new">
-	
+	<input name="pizza" id="namepizza" placeholder="Name Your Pizza" type="text" required>
 	<input type="text" name="total" value="150" style="width: max-content; color: blanchedalmond; text-align: center;" readonly>
 	<input type="submit" value="NEXT" style=" width: 100%;">
 	<br>
@@ -367,13 +345,13 @@ function updateTotal(){
 
 
 $(".same input[name='cheeseradio']").click(function(){
-	if($('input:radio[name=cheeseradio]:checked').val() == "noc"){
+	if($('input:radio[name=cheeseradio]:checked').val() == "nocheese"){
 		$(".same input[name='cheese']").val('0');
 	}
     else if($('input:radio[name=cheeseradio]:checked').val() == "cheese"){
 		$(".same input[name='cheese']").val('30');
     }
-	else if($('input:radio[name=cheeseradio]:checked').val() == "double"){
+	else if($('input:radio[name=cheeseradio]:checked').val() == "doublecheese"){
 		$(".same input[name='cheese']").val('60');
 	}
 	updateTotal();
@@ -399,10 +377,10 @@ $(".same input[name='crustradio']").click(function(){
 
 
 $(".same input[name='sauceradio']").click(function(){
-	if($('input:radio[name=sauceradio]:checked').val() == "nos"){
+	if($('input:radio[name=sauceradio]:checked').val() == "nosauce"){
 		$(".same input[name='sauce']").val('0');
 	}
-    else if($('input:radio[name=sauceradio]:checked').val() == "tomato"){
+    else if($('input:radio[name=sauceradio]:checked').val() == "sauce"){
 		$(".same input[name='sauce']").val('20');
     }
 	else if($('input:radio[name=sauceradio]:checked').val() == "spicy"){
@@ -410,6 +388,8 @@ $(".same input[name='sauceradio']").click(function(){
 	}
 	updateTotal();
 });
+
+
 
 
 

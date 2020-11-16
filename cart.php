@@ -4,9 +4,37 @@
 session_start();
 
 if(isset($_SESSION["user"])){
-    
+	
+	
 
-?>
+
+
+$servername = "localhost";
+$dbuser = "root";
+$dbpass = "root";
+$database = "limit";
+
+
+$conn = new mysqli($servername, $dbuser, $dbpass, $database, "3308");
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+   }
+
+
+   else{
+
+	$max = sizeof($_SESSION['cart']);
+	$arr = $_SESSION['cart'];
+
+
+
+
+
+
+
+?> 
 
 
 
@@ -34,6 +62,94 @@ if(isset($_SESSION["user"])){
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5G6PPWB');</script>
   <!-- End Google Tag Manager -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" 
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+  crossorigin="anonymous"></script>
+
+
+
+  <script>
+	$(document).ready(function() {
+
+/* Set rates */
+var taxRate = 0.05;
+var fadeTime = 300;
+
+/* Assign actions */
+$('.pass-quantity input').change(function() {
+updateQuantity(this);
+});
+
+$('.vincent_product-remove').click(function() {
+removeItem(this);
+});
+
+
+/* Recalculate cart */
+function recalculateCart() {
+var subtotal = 0;
+
+/* Sum up row totals */
+$('.vincent_cart_item').each(function() {
+subtotal += parseFloat($(this).children('.vincent_product-subtotal span').text());
+console.log(subtotal);
+});
+
+/* Calculate totals */
+var tax = subtotal * taxRate;
+var total = subtotal + tax;
+
+/* Update totals display */
+$('.totals-value').fadeOut(fadeTime, function() {
+$('#cart-subtotal').html(subtotal.toFixed(2));
+$('#cart-tax').html(tax.toFixed(2));
+$('.cart-total').html(total.toFixed(2));
+if (total == 0) {
+$('.checkout').fadeOut(fadeTime);
+} else {
+$('.checkout').fadeIn(fadeTime);
+}
+$('.totals-value').fadeIn(fadeTime);
+});
+}
+
+
+/* Update quantity */
+function updateQuantity(quantityInput) {
+/* Calculate line price */
+var productRow = $(quantityInput).parent().parent();
+var price = parseFloat(productRow.children('.product-price').text());
+var quantity = $(quantityInput).val();
+var linePrice = price * quantity;
+
+/* Update line price display and recalc cart totals */
+productRow.children('.product-line-price').each(function() {
+$(this).fadeOut(fadeTime, function() {
+$(this).text(linePrice.toFixed(2));
+recalculateCart();
+$(this).fadeIn(fadeTime);
+});
+});
+}
+
+/* Remove item from cart */
+function removeItem(removeButton) {
+/* Remove row from DOM and recalc cart total */
+var productRow = $(removeButton).parent().parent();
+// productRow.slideUp(fadeTime, function() {
+productRow.remove();
+recalculateCart();
+// });
+}
+
+});
+</script>
+
+
+
+
+
 </head>
 
 <body>
@@ -69,7 +185,7 @@ if(isset($_SESSION["user"])){
 								</ul>
 							</li>
 							
-							<li class="menu-item active menu-item-has-children"><a href="cart.html">Cart</a>
+							<li class="menu-item active menu-item-has-children"><a href="#">Cart</a>
 								
 							</li>
 							<li class="menu-item menu-item-has-children"><a href="feedback.html">Contact</a>
@@ -91,7 +207,18 @@ if(isset($_SESSION["user"])){
 					</div>
 
 			</div>
-			
+			<div class="col col-3 vincent_header_right">
+				<div class="vincent_inner">
+					<a href="profile.html">
+						<!-- <div class="vincent_shopping_cart">
+							<div class="vincent_total_price">$0.00</div>
+							<div class="vincent_total_items">0 items - View Cart</div>
+							<div class="vincent_cart_item_counter">0</div>
+						</div> --> Welcome, <?php echo $_SESSION['user']; ?>
+					</a>
+					<form><li class="menu-item" ><a href="backend/logout.php"> Logout </a></li></form>
+				</div>
+			</div>
 		</div>
 	</header>
 	<div class="vincent_title_block vincent_corners">
@@ -114,9 +241,25 @@ if(isset($_SESSION["user"])){
 						</tr>
 					</thead>
 					<tbody>
+
+					<?php 
+					
+
+						foreach($arr as $key => $val){
+
+							$sql = "select o_cost from menuorder where o_pizza = '$val'";
+							$res = mysqli_query($conn,$sql);
+							$row = mysqli_fetch_assoc($res); 
+
+
+						
+
+
+					?>
+
 						<tr class="vincent_cart_item">
 							<td>
-								<a class="vincent_product-remove" href="#"> × </a>
+								<a class="vincent_product-remove" > × </a>
 							</td>
 							<td class="vincent_product-thumbnail">
 								<a href="single-product.html">
@@ -124,40 +267,21 @@ if(isset($_SESSION["user"])){
 								</a>
 							</td>
 							<td class="vincent_product-name" data-title="Product">
-								<a href="single-product.html">Pepperoni</a>
+								<!-- <a href="single-product.html">Pepperoni</a> -->
+								<?php echo $val;?>
 							</td>
 							<td class="vincent_product-price" data-title="Price">
-								<span>$2.90</span>
+								<span style="color:white;" >₹<?php echo $row['o_cost'];?></span>
 							</td>
 							<td  class="vincent_product-quantity"  data-title="Quantity">
-								<input type="text" value="1" name="quantity" class="vincent_quantity">
+								<input type="text" min="1" value="1" name="quantity" class="vincent_quantity" >
 							</td>
 							<td class="vincent_product-subtotal" data-title="Total">
-								<span>$2.90</span>
+								<span style="color:white;" >₹<?php echo $row['o_cost'];?></span>
 							</td>
 						</tr>
-						<tr class="vincent_cart_item">
-							<td>
-								<a class="vincent_product-remove" href="#"> × </a>
-							</td>
-							<td  class="vincent_product-thumbnail">
-								<a href="single-product.html">
-									<img src="img/11-300x300.png" alt="">
-								</a>
-							</td>
-							<td class="vincent_product-name" data-title="Product">
-								<a href="single-product.html">MARGHERITA</a>
-							</td>
-							<td class="vincent_product-price" data-title="Price">
-								<span>$2.60</span>
-							</td>
-							<td  class="vincent_product-quantity"  data-title="Quantity">
-								<input type="text" value="1" name="quantity" class="vincent_quantity">
-							</td>
-							<td class="vincent_product-subtotal" data-title="Total">
-								<span>$2.60</span>
-							</td>
-						</tr>
+						<?php } ?>
+						
 						<tr class="vincent_cart_actions">
 							<td colspan="6">
 								<div class="vincent_coupon">
@@ -175,17 +299,50 @@ if(isset($_SESSION["user"])){
 						<tbody>
 							<tr>
 								<th>Subtotal</th>
-								<td><span>$5.50</span></td>
+								<td><span class="totals-value" id="cart-subtotal">₹5.50</span></td>
+							</tr>
+							<tr>
+								<th>Tax</th>
+								<td><span class="totals-value" id="cart-tax" >0.05</span></td>
 							</tr>
 							<tr>
 								<th>Total</th>
-								<td><span>$5.50</span></td>
+								<td><span class="totals-calue cart-total">₹5.50</span></td>
 							</tr>
 						</tbody>
 					</table>
 					<a class="vincent_button vincent_button_background" href="checkout.html">Proceed to checkout</a>
 				</div>
 			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			<!-- <div class="col col-4 vincent_sidebar">
 				 <div class="vincent_sidebar_block vincent_search_block">
@@ -262,6 +419,19 @@ if(isset($_SESSION["user"])){
 			</div> -->
 		</div>
 	</div>
+
+
+
+
+
+
+	<!-- <div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/CB****************************10'><img src ='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png' /></a></div> -->
+
+
+
+
+
+
 	<div class="vincent_back_to_top"></div>
 	<footer>
 		<div class="vincent_container">
@@ -300,13 +470,15 @@ if(isset($_SESSION["user"])){
 
 
 
-
-
-
 <?php 
-}
+
+} // end of connection database
+
+} // end of if for checking SESSION
 
 else{
     echo "<script>window.location.href='signin.php'</script>";
 }
-?>
+?> 
+
+  

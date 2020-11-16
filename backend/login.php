@@ -48,16 +48,14 @@ if ($conn->connect_error) {
                 
                 
                 $_SESSION['user'] = $user->r_username;
+                $_SESSION['cart'] = array();
                 
                 
-                // echo "HELLO!!!";
 
                 echo "<script>window.location.href='../orderpage.php'</script>";
             
             
             
-                //echo "<script>window.location.href='http://somegram.000webhostapp.com/work.html'</script>";
-            // header("Location: http://somegram.000webhostapp.com/work.html");
         }
         else{
             echo "Password Incorrect!";
