@@ -450,7 +450,7 @@ function updateTotal(){
 
 
 
-	$(".opt input[name='moz']").click(function(){
+	$(".opt input[name='moz']").on('click blur keydown ', function(){
 	if($('input[name="moz"]').val() == 0){
 		$(".opt input[name='mozsum']").val('0');
 	}
@@ -465,7 +465,7 @@ function updateTotal(){
 });
 
 
-$(".opt input[name='pep']").click(function(){
+$(".opt input[name='pep']").on('click blur keydown ', function(){
 	if($('input[name="pep"]').val() == 0){
 		$(".opt input[name='pepsum']").val('0');
 	}
@@ -480,7 +480,7 @@ $(".opt input[name='pep']").click(function(){
 });
 
 
-$(".opt input[name='cap']").click(function(){
+$(".opt input[name='cap']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="cap"]').val() == 0){
 		$(".opt input[name='capsum']").val('0');
@@ -495,7 +495,7 @@ $(".opt input[name='cap']").click(function(){
 	updateTotal();
 });
 
-$(".opt input[name='bpep']").click(function(){
+$(".opt input[name='bpep']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="bpep"]').val() == 0){
 		$(".opt input[name='bpepsum']").val('0');
@@ -510,7 +510,7 @@ $(".opt input[name='bpep']").click(function(){
 	updateTotal();
 });
 
-$(".opt input[name='pap']").click(function(){
+$(".opt input[name='pap']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="pap"]').val() == 0){
 		$(".opt input[name='papsum']").val('0');
@@ -525,7 +525,7 @@ $(".opt input[name='pap']").click(function(){
 	updateTotal();
 });
 
-$(".opt input[name='gpep']").click(function(){
+$(".opt input[name='gpep']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="gpep"]').val() == 0){
 		$(".opt input[name='gpepsum']").val('0');
@@ -541,7 +541,7 @@ $(".opt input[name='gpep']").click(function(){
 });
 
 
-$(".opt input[name='olive']").click(function(){
+$(".opt input[name='olive']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="olive"]').val() == 0){
 		$(".opt input[name='olivesum']").val('0');
@@ -557,7 +557,7 @@ $(".opt input[name='olive']").click(function(){
 });
 
 
-$(".opt input[name='bchkn']").click(function(){
+$(".opt input[name='bchkn']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="bchkn"]').val() == 0){
 		$(".opt input[name='bchknsum']").val('0');
@@ -573,7 +573,7 @@ $(".opt input[name='bchkn']").click(function(){
 });
 
 
-$(".opt input[name='corn']").click(function(){
+$(".opt input[name='corn']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="corn"]').val() == 0){
 		$(".opt input[name='cornsum']").val('0');
@@ -589,7 +589,7 @@ $(".opt input[name='corn']").click(function(){
 });
 
 
-$(".opt input[name='gchkn']").click(function(){
+$(".opt input[name='gchkn']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="gchkn"]').val() == 0){
 		$(".opt input[name='gchknsum']").val('0');
@@ -605,7 +605,7 @@ $(".opt input[name='gchkn']").click(function(){
 });
 
 
-$(".opt input[name='bcorn']").click(function(){
+$(".opt input[name='bcorn']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="bcorn"]').val() == 0){
 		$(".opt input[name='bcornsum']").val('0');
@@ -621,7 +621,7 @@ $(".opt input[name='bcorn']").click(function(){
 });
 
 
-$(".opt input[name='sausage']").click(function(){
+$(".opt input[name='sausage']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="sausage"]').val() == 0){
 		$(".opt input[name='sausagesum']").val('0');
@@ -637,7 +637,7 @@ $(".opt input[name='sausage']").click(function(){
 });
 
 
-$(".opt input[name='mush']").click(function(){
+$(".opt input[name='mush']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="mush"]').val() == 0){
 		$(".opt input[name='mushsum']").val('0');
@@ -653,7 +653,7 @@ $(".opt input[name='mush']").click(function(){
 });
 
 
-$(".opt input[name='peri']").click(function(){
+$(".opt input[name='peri']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="peri"]').val() == 0){
 		$(".opt input[name='perisum']").val('0');
@@ -669,7 +669,7 @@ $(".opt input[name='peri']").click(function(){
 });
 
 
-$(".opt input[name='tomato']").click(function(){
+$(".opt input[name='tomato']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="tomato"]').val() == 0){
 		$(".opt input[name='tomatosum']").val('0');
@@ -685,7 +685,7 @@ $(".opt input[name='tomato']").click(function(){
 });
 
 
-$(".opt input[name='bbqham']").click(function(){
+$(".opt input[name='bbqham']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="bbqham"]').val() == 0){
 		$(".opt input[name='bbqhamsum']").val('0');
@@ -701,7 +701,7 @@ $(".opt input[name='bbqham']").click(function(){
 });
 
 
-$(".opt input[name='pan']").click(function(){
+$(".opt input[name='pan']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="pan"]').val() == 0){
 		$(".opt input[name='pansum']").val('0');
@@ -717,7 +717,7 @@ $(".opt input[name='pan']").click(function(){
 });
 
 
-$(".opt input[name='pepham']").click(function(){
+$(".opt input[name='pepham']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="pepham"]').val() == 0){
 		$(".opt input[name='pephamsum']").val('0');
@@ -733,7 +733,7 @@ $(".opt input[name='pepham']").click(function(){
 });
 
 
-$(".opt input[name='gham']").click(function(){
+$(".opt input[name='gham']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="gham"]').val() == 0){
 		$(".opt input[name='ghamsum']").val('0');
@@ -749,7 +749,7 @@ $(".opt input[name='gham']").click(function(){
 });
 
 
-$(".opt input[name='jala']").click(function(){
+$(".opt input[name='jala']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="jala"]').val() == 0){
 		$(".opt input[name='jalasum']").val('0');
@@ -765,7 +765,7 @@ $(".opt input[name='jala']").click(function(){
 });
 
 
-$(".opt input[name='onion']").click(function(){
+$(".opt input[name='onion']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="onion"]').val() == 0){
 		$(".opt input[name='onionsum']").val('0');
@@ -781,7 +781,7 @@ $(".opt input[name='onion']").click(function(){
 });
 
 
-$(".opt input[name='pine']").click(function(){
+$(".opt input[name='pine']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="pine"]').val() == 0){
 		$(".opt input[name='pinesum']").val('0');
@@ -797,7 +797,7 @@ $(".opt input[name='pine']").click(function(){
 });
 
 
-$(".opt input[name='wing']").click(function(){
+$(".opt input[name='wing']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="wing"]').val() == 0){
 		$(".opt input[name='wingsum']").val('0');
@@ -813,7 +813,7 @@ $(".opt input[name='wing']").click(function(){
 });
 
 
-$(".opt input[name='bpork']").click(function(){
+$(".opt input[name='bpork']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="bpork"]').val() == 0){
 		$(".opt input[name='bporksum']").val('0');
@@ -829,7 +829,7 @@ $(".opt input[name='bpork']").click(function(){
 });
 
 
-$(".opt input[name='gpork']").click(function(){
+$(".opt input[name='gpork']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="gpork"]').val() == 0){
 		$(".opt input[name='gporksum']").val('0');
@@ -845,7 +845,7 @@ $(".opt input[name='gpork']").click(function(){
 });
 
 
-$(".opt input[name='gems']").click(function(){
+$(".opt input[name='gems']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="gems"]').val() == 0){
 		$(".opt input[name='gemssum']").val('0');
@@ -861,7 +861,7 @@ $(".opt input[name='gems']").click(function(){
 });
 
 
-$(".opt input[name='straw']").click(function(){
+$(".opt input[name='straw']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="straw"]').val() == 0){
 		$(".opt input[name='strawsum']").val('0');
@@ -877,7 +877,7 @@ $(".opt input[name='straw']").click(function(){
 });
 
 
-$(".opt input[name='tchkn']").click(function(){
+$(".opt input[name='tchkn']").on('click blur keydown ', function(){
 	let x;
 	if($('input[name="tchkn"]').val() == 0){
 		$(".opt input[name='tchknsum']").val('0');
