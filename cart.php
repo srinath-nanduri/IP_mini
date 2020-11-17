@@ -27,8 +27,7 @@ if ($conn->connect_error) {
 
 	$max = sizeof($_SESSION['cart']);
 	$arr = $_SESSION['cart'];
-
-
+	$tot=0;
 
 
 
@@ -63,9 +62,12 @@ if ($conn->connect_error) {
   })(window,document,'script','dataLayer','GTM-5G6PPWB');</script>
   <!-- End Google Tag Manager -->
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js" 
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" 
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 
 
@@ -114,6 +116,8 @@ $('.totals-value').fadeIn(fadeTime);
 });
 }
 
+recalculateCart();
+
 
 /* Update quantity */
 function updateQuantity(quantityInput) {
@@ -136,9 +140,11 @@ $(this).fadeIn(fadeTime);
 /* Remove item from cart */
 function removeItem(removeButton) {
 /* Remove row from DOM and recalc cart total */
-var productRow = $(removeButton).parent().parent();
+var productRow = $(removeButton).parent().parent().parent();
 // productRow.slideUp(fadeTime, function() {
 productRow.remove();
+e = $('removeform<?php echo $key ?>');
+e.currentTarget.submit();
 recalculateCart();
 // });
 }
@@ -259,7 +265,18 @@ recalculateCart();
 
 						<tr class="vincent_cart_item">
 							<td>
-								<a class="vincent_product-remove" > × </a>
+								<!-- <a class="vincent_product-remove" onclick="SubmitFormData();"  style="color: tomato;cursor: pointer;" > × </a> -->
+
+
+
+								<form action="backend/removecart.php" id="removeform<?php echo $key ?>" method="POST">
+								<input type="hidden" value="<?php echo $key ?>" name="rem<?php echo $key ?>" />
+								<input type="submit" id="removeit<?php echo $key ?>"  class="vincent_product-remove" style=" color:tomato; font-size:x-large;" value='×'/>
+								</form>
+
+
+
+
 							</td>
 							<td class="vincent_product-thumbnail">
 								<a href="single-product.html">
@@ -271,13 +288,39 @@ recalculateCart();
 								<?php echo $val;?>
 							</td>
 							<td class="vincent_product-price" data-title="Price">
-								<span style="color:white;" >₹<?php echo $row['o_cost'];?></span>
+							₹<span style="color:white;" id="subcost<?php echo $key ?>"><?php echo $row['o_cost'];?></span>
 							</td>
 							<td  class="vincent_product-quantity"  data-title="Quantity">
-								<input type="text" min="1" value="1" name="quantity" class="vincent_quantity" >
+								<input type="number" min="1" value="1" style="width:100px;" id="quantity<?php echo $key ?>" name="quantity"  class="vincent_quantity" >
+								<script>
+								
+								$('#quantity<?php echo $key ?>').change(function(){
+									$x = $('#quantity<?php echo $key ?>').val();
+									$y = $('#subcost<?php echo $key ?>').text();
+									$y = parseInt($y);
+									$('#totcost<?php echo $key ?>').text($x * $y);
+									$c = getTotalCost();
+									$('#cart-subtotal').text($c);
+									$('#cart-total').text($c+($c*0.05));
+								});
+
+
+								function getTotalCost() {
+								var totalPrice = 0;
+								$(".tott").each(function() {
+									totalPrice += parseFloat($(this).html());
+								});
+								return totalPrice;
+								}
+								</script>
 							</td>
 							<td class="vincent_product-subtotal" data-title="Total">
-								<span style="color:white;" >₹<?php echo $row['o_cost'];?></span>
+							₹<span style="color:white;" class="tott" id="totcost<?php echo $key ?>" ><?php echo $row['o_cost'];?></span>
+							
+							
+	
+
+							
 							</td>
 						</tr>
 						<?php } ?>
@@ -288,7 +331,7 @@ recalculateCart();
 									<input type="text" name="" placeholder="Coupon code">
 									<button>Apply coupon</button>
 								</div>
-								<button class="vincent_update_cart">Update cart</button>
+							<a href="orderpage.php">	<button class="vincent_update_cart">Add a Pizza</button></a>
 							</td>
 						</tr>
 					</tbody>
@@ -299,7 +342,24 @@ recalculateCart();
 						<tbody>
 							<tr>
 								<th>Subtotal</th>
-								<td><span class="totals-value" id="cart-subtotal">₹5.50</span></td>
+								<td>₹<span class="totals-value" id="cart-subtotal">5.50</span></td>
+								<script>
+							
+									$(document).ready(function(){
+										$c = getTotalCost();
+										$('#cart-subtotal').text($c);
+										$('#cart-total').text($c+($c*0.05));
+									});
+
+							function getTotalCost() {
+  var totalPrice = 0;
+  $(".tott").each(function() {
+	totalPrice += parseFloat($(this).html());
+  });
+  return totalPrice;
+}
+
+							</script>
 							</tr>
 							<tr>
 								<th>Tax</th>
@@ -307,7 +367,10 @@ recalculateCart();
 							</tr>
 							<tr>
 								<th>Total</th>
-								<td><span class="totals-calue cart-total">₹5.50</span></td>
+								<td>₹<span class="totals-calue cart-total" id="cart-total">5.50</span></td>
+								<script>
+									
+								</script>
 							</tr>
 						</tbody>
 					</table>

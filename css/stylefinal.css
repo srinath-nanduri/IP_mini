@@ -4864,7 +4864,7 @@ tfoot td {
   }
   .vincent_product-name:before,
   .vincent_product-price:before,
-  .vincent_product-quantity:before,
+  /* .vincent_product-quantity:before, */
   .vincent_product-subtotal:before {
     content: attr(data-title) ':';
     font-weight: 700;
@@ -5229,3 +5229,12 @@ tfoot td {
    width: 50%;
    text-align: center;
  } */
+
+
+
+
+ .vincent_product-remove{
+   color: tomato;
+   cursor: pointer;
+
+ }
