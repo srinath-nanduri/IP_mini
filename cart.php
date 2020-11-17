@@ -152,7 +152,9 @@ recalculateCart();
 });
 </script>
 
-
+<script
+    src="https://www.paypal.com/sdk/js?client-id=AfQrrmX0EFxSmEcBsVe5nZ1cr0rYJaZjfHIDRMjPCHYoygfQfBF4Qf49J9DywEtz6K2h_1kjOxr_XN5N"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+  </script>
 
 
 
@@ -375,6 +377,27 @@ recalculateCart();
 						</tbody>
 					</table>
 					<a class="vincent_button vincent_button_background" href="checkout.html">Proceed to checkout</a>
+					<div id="paypal-button-container"></div>
+
+<!-- <script>
+  paypal.Buttons().render('#paypal-button-container');
+  // This function displays Smart Payment Buttons on your web page.
+</script> -->
+<script>
+$x = parseFloat($('#cart-total').text());
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      // This function sets up the details of the transaction, including the amount and line item details.
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: $x
+          }
+        }]
+      });
+    }
+  }).render('#paypal-button-container');
+</script>
 				</div>
 			</div>
 
