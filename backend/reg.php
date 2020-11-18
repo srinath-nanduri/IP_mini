@@ -81,10 +81,7 @@ else{
           $stmt->bind_param("ssss", $email, $hash, $username, $name);
           $stmt->execute();
         //   echo "Successfully Registered.";
-        echo "<script>
-            alert('Successfully Registered.');
-            window.location.href='signin.html';
-        </script>";
+        
         
 
           //echo "<script>window.location.href='http://nanmav.000webhostapp.com/'</script>";
@@ -92,9 +89,18 @@ else{
         //   echo "<script>window.location.href='index.php'</script>";
 
           $stmt->close();
+
+          $stmt = $conn->prepare("insert into profile( p_user, p_check) values(?,0) ");
+          $stmt->bind_param("s", $user);
+          $stmt->execute();
+
           $conn->close();
      
-
+          echo "<script>
+          alert('Successfully Registered.');
+          window.location.href='signin.html';
+      </script>";
+      
       }
    
 
