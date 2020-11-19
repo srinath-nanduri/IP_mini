@@ -107,7 +107,7 @@ if(isset($_SESSION["user"])){
 									<li class="menu-item "><a href="teams.html">Team</a></li>
 								</ul>
 							</li>
-							
+						
 							<li class="menu-item menu-item-has-children"><a href="cart.php">Cart</a>
 
 							<li class="menu-item menu-item-has-children"><a href="feedback.html">Contact</a>
@@ -132,7 +132,7 @@ if(isset($_SESSION["user"])){
 			</div>
 			<div class="col col-3 vincent_header_right">
 				<div class="vincent_inner">
-					<a href="profile.html">
+					<a href="profile.php" style="font:28px 'PT Sans Narrow', sans-serif">
 						<!-- <div class="vincent_shopping_cart">
 							<div class="vincent_total_price">$0.00</div>
 							<div class="vincent_total_items">0 items - View Cart</div>

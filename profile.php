@@ -176,7 +176,7 @@ if(isset($_SESSION["user"])){
 						</p>
 					</div>
         </div>
-        <form action="pro.php" method="POST" id="signup-form" class="signup-form vincent_form1">
+        <form action="backend/pro.php" method="POST" id="signup-form" class="signup-form vincent_form1">
         <div class="grid-item">
           <div class="main" >
   

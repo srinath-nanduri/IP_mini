@@ -32,6 +32,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5G6PPWB');</script>
   <!-- End Google Tag Manager -->
+  
   <script >
 	function myFunction()
 {
@@ -68,6 +69,37 @@ function myFunction1()
 
 
   </script>
+  <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+  <script src="https://makitweb.com/demo/jquery.js"></script>
+  <script>
+            $(document).ready(function(){
+
+                $("#username").keyup(function(){
+
+                    var username = $("#username").val().trim();
+
+                    if(username != ''){
+
+                        $("#uname_response").show();
+
+                        $.ajax({
+                            url: 'backend/ajaxuser.php',
+                            type: 'post',
+                            data: {username:username},
+                            success: function(response){
+
+                                $('#uname_response').html(response);
+
+                            }
+                        });
+                    }else{
+                        $("#uname_response").hide();
+                    }
+
+                });
+
+            });
+        </script>
 </head>
 <body class="vincent_home6 vincent_home1" >
 	<header class="vincent_header" style="padding-top:-450px">
@@ -179,8 +211,8 @@ function myFunction1()
 		</div>
 	</header>
 
-
-		<div class="main" style="margin-top:-100px;">
+<div class="vincent_container">
+		<div class="main" >
 
             <div class="container1" style="padding-bottom:30px;" >
                 <div class="signup-content">
@@ -192,7 +224,8 @@ function myFunction1()
                         </div>
 						<div class="form-group">
                             <input type="text" required class="form-input" name="username" id="username" placeholder="Username"/>
-                        </div>
+							<div id="uname_response" ></div>
+						</div>
                         <div class="form-group">
                             <input type="email" required class="form-input" name="email" id="email" placeholder="Email"/>
                         </div>
@@ -218,11 +251,12 @@ function myFunction1()
             </div>
     
 		</div>
+		</div>
 		
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="js/main.js"></script>
+        <!-- <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script> -->
 				
-			
+				
   <script src="https://demo-storage.com/pm/html/vincent/js/jquery-3.2.1.min.js"></script>
 	<script src="https://demo-storage.com/pm/html/vincent/js/jquery.data-parallax.min.js"></script>
 	<script src="https://demo-storage.com/pm/html/vincent/js/owl.carousel.min.js"></script>

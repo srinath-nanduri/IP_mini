@@ -37,7 +37,7 @@ else{
   
         echo "<script>
             alert('Successfully Updated.');
-            window.location.href='prodone.php';
+            window.location.href='../prodone.php';
         </script>";
         
 

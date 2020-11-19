@@ -31,13 +31,10 @@ else{
         //   echo "Successfully Registered.";
         echo "<script>
             // alert('Successfully Updated.');
-            window.location.href='profile.php';
+            window.location.href='../profile.php';
         </script>";
         
 
-          //echo "<script>window.location.href='http://nanmav.000webhostapp.com/'</script>";
-
-        //   echo "<script>window.location.href='index.php'</script>";
 
           $stmt->close();
           $conn->close();

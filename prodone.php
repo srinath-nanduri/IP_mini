@@ -59,7 +59,7 @@ if(isset($_SESSION["user"])){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/owl.carousel.min.css">
   <link rel="stylesheet"  href="css/stylefinal.css">
-  <link rel="stylesheet"  href="css/style1.css">
+  
 
 	<!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -80,7 +80,39 @@ label{
   margin-bottom: 35px;
 }
 
+thead td{
+min-width: 100px;
+}
+
+#div1::-webkit-scrollbar {
+    display: none;
+}
+
+#div2::-webkit-scrollbar {
+	width:5px;
+	height:5px;
+	/* color:black; */
+	background-color:transparent;
+	opacity:0.8;
+}
+
+#div2::-webkit-scrollbar-thumb {
+	width:5px;
+	height:5px;
+	/* color:black; */
+	background-color:#ffc851;
+	opacity:0.8;
+}
+
+
+
+#hidehead{
+	color:red;
+	opacity:0;
+	/* display:none; */
+}
   </style>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 
 <body>
@@ -160,7 +192,7 @@ label{
 						<p class="vincent_excerpt"><?php echo $bio;?></p>
 					</div>
         </div>
-        <form action="change.php" method="POST" class="signup-form vincent_form1">
+        <form action="backend/change.php" method="POST" class="signup-form vincent_form1">
         <div class="grid-item">
           &nbsp;
         </div>
@@ -207,6 +239,181 @@ label{
 		</div>
 	
 	</div>
+
+
+
+
+
+
+
+	<hr>
+		<div style="margin:0 auto; width: fit-content;">
+			<h1>Your Orders</h1>
+		</div>
+	<hr>
+
+
+
+
+    <div class="vincent_container vincent_blog_standard" >
+		<div id="div1" style="overflow: scroll;">
+		<table >
+		<thead  style="font-weight: bolder; ">
+						<tr>
+                            <td><strong>Sr No.</strong></td>
+                            <td><strong>Amount</strong></td>
+                            <td><strong>Size</strong></td>
+                            <td><strong>Crust</strong></td>
+                            <td><strong>Sauce</strong></td>
+                            <td><strong>Cheese</strong></td>
+                            <td><strong>Mozarella</strong></td>
+                            <td><strong>Pepperoni</strong></td>
+                            <td><strong>Capsicum</strong></td>
+                            <td><strong>BBQ Pepperoni</strong></td>
+                            <td><strong>Paprika</strong></td>
+                            <td><strong>Grilled Pepperoni</strong></td>
+                            <td><strong>Olives</strong></td>
+                            <td><strong>BBQ Chicken</strong></td>
+                            <td><strong>Corn</strong></td>
+                            <td><strong>Grilled Chicken</strong></td>
+                            <td><strong>Baby Corn</strong></td>
+                            <td><strong>Chicken Sausage</strong></td>
+                            <td><strong>Mushroom</strong></td>
+                            <td><strong>Peri-Peri Wings</strong></td>
+                            <td><strong>Tomato</strong></td>
+                            <td><strong>BBQ Ham</strong></td>
+                            <td><strong>Paneer</strong></td>
+                            <td><strong>Pepper Grilled Ham</strong></td>
+                            <td><strong>Jalapeno</strong></td>
+                            <td><strong>Grilled Ham</strong></td>
+                            <td><strong>Onion</strong></td>
+                            <td><strong>Stuffed Chicken Wing</strong></td>
+                            <td><strong>Pineapple</strong></td>
+                            <td><strong>BBQ Pork</strong></td>
+                            <td><strong>Strawberry</strong></td>
+                            <td><strong>Grilled Pork</strong></td>
+                            <td><strong>Gems</strong></td>
+							<td><strong>Tandoori Chicken</strong></td>
+						</tr>
+						</thead>
+		</table>
+</div>
+        <div class="row gutters" id="div2" style="max-height:400px; overflow: scroll;">
+    
+            <div class="col col-11 vincent_content" style="padding-top: 0px;">
+            <div class="vincent_blog_standard_wraper">
+                <div class="vincent_blog_standard_item">
+                    <!-- <h3 class="vincent_blog_standard_title">Your Previous Orders</h3> -->
+                   
+                    <table class="">
+						 <thead id="hidehead" style="font-weight: bolder; ">
+						<tr>
+                            <td><strong>Sr No.</strong></td>
+                            <td><strong>Amount</strong></td>
+                            <td><strong>Size</strong></td>
+                            <td><strong>Crust</strong></td>
+                            <td><strong>Sauce</strong></td>
+                            <td><strong>Cheese</strong></td>
+                            <td><strong>Mozarella</strong></td>
+                            <td><strong>Pepperoni</strong></td>
+                            <td><strong>Capsicum</strong></td>
+                            <td><strong>BBQ Pepperoni</strong></td>
+                            <td><strong>Paprika</strong></td>
+                            <td><strong>Grilled Pepperoni</strong></td>
+                            <td><strong>Olives</strong></td>
+                            <td><strong>BBQ Chicken</strong></td>
+                            <td><strong>Corn</strong></td>
+                            <td><strong>Grilled Chicken</strong></td>
+                            <td><strong>Baby Corn</strong></td>
+                            <td><strong>Chicken Sausage</strong></td>
+                            <td><strong>Mushroom</strong></td>
+                            <td><strong>Peri-Peri Wings</strong></td>
+                            <td><strong>Tomato</strong></td>
+                            <td><strong>BBQ Ham</strong></td>
+                            <td><strong>Paneer</strong></td>
+                            <td><strong>Pepper Grilled Ham</strong></td>
+                            <td><strong>Jalapeno</strong></td>
+                            <td><strong>Grilled Ham</strong></td>
+                            <td><strong>Onion</strong></td>
+                            <td><strong>Stuffed Chicken Wing</strong></td>
+                            <td><strong>Pineapple</strong></td>
+                            <td><strong>BBQ Pork</strong></td>
+                            <td><strong>Strawberry</strong></td>
+                            <td><strong>Grilled Pork</strong></td>
+                            <td><strong>Gems</strong></td>
+							<td><strong>Tandoori Chicken</strong></td>
+						</tr>
+						</thead> 
+						<tbody style="margin-top:-200px;" >
+						<?php
+$count=1;
+$sel_query="Select * from menuorder WHERE o_user='$user' ORDER BY o_id desc;";
+$result = mysqli_query($conn,$sel_query);
+while($row = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <td><?php echo $count; ?></td>
+                            <td>₹<?php echo $row["o_cost"]; ?></td>
+                            <td><?php echo $row["o_size"]; ?></td>
+                            <td><?php echo $row["o_crust"]; ?></td>
+                            <td><?php echo $row["o_sauce"]; ?></td>
+                            <td><?php echo $row["o_cheese"]; ?></td>
+                            <td><?php echo $row["o_moz"]; ?></td>
+                            <td><?php echo $row["o_pep"]; ?></td>
+                            <td><?php echo $row["o_cap"]; ?></td>
+                            <td><?php echo $row["o_bpep"]; ?></td>
+                            <td><?php echo $row["o_pap"]; ?></td>
+                            <td><?php echo $row["o_gpep"]; ?></td>
+                            <td><?php echo $row["o_olive"]; ?></td>
+                            <td><?php echo $row["o_bchkn"]; ?></td>
+                            <td><?php echo $row["o_corn"]; ?></td>
+                            <td><?php echo $row["o_gchkn"]; ?></td>
+                            <td><?php echo $row["o_bcorn"]; ?></td>
+                            <td><?php echo $row["o_sausage"]; ?></td>
+                            <td><?php echo $row["o_mush"]; ?></td>
+                            <td><?php echo $row["o_peri"]; ?></td>
+                            <td><?php echo $row["o_tomato"]; ?></td>
+                            <td><?php echo $row["o_bbqham"]; ?></td>
+                            <td><?php echo $row["o_pan"]; ?></td>
+                            <td><?php echo $row["o_pepham"]; ?></td>
+                            <td><?php echo $row["o_jala"]; ?></td>
+                            <td><?php echo $row["o_gham"]; ?></td>
+                            <td><?php echo $row["o_onion"]; ?></td>
+                            <td><?php echo $row["o_wing"]; ?></td>
+                            <td><?php echo $row["o_pine"]; ?></td>
+                            <td><?php echo $row["o_bpork"]; ?></td>
+                            <td><?php echo $row["o_straw"]; ?></td>
+                            <td><?php echo $row["o_gpork"]; ?></td>
+                            <td><?php echo $row["o_gems"]; ?></td>
+                            <td><?php echo $row["o_tchkn"]; ?></td>
+						</tr>
+						<?php $count++; } ?>
+						</tbody>
+                    </table>
+                   <script>
+					   $("#div1").scroll(function () { 
+  $("#div2").scrollTop($("#div1").scrollTop());
+  $("#div2").scrollLeft($("#div1").scrollLeft());
+});
+$("#div2").scroll(function () { 
+  $("#div1").scrollTop($("#div2").scrollTop());
+  $("#div1").scrollLeft($("#div2").scrollLeft());
+});
+				   </script>
+
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
 	<div class="vincent_back_to_top"></div>
 	<footer>
 		<div class="vincent_container">

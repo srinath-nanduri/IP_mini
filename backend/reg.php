@@ -90,15 +90,16 @@ else{
 
           $stmt->close();
 
-          $stmt = $conn->prepare("insert into profile( p_user, p_check) values(?,0) ");
-          $stmt->bind_param("s", $user);
-          $stmt->execute();
+          $stmt1 = $conn->prepare("insert into profile( p_user, p_check) values(?,0) ");
+          $stmt1->bind_param("s", $username);
+          $stmt1->execute();
+          $stmt1->close();
 
           $conn->close();
      
           echo "<script>
           alert('Successfully Registered.');
-          window.location.href='signin.html';
+          window.location.href='../signin.php';
       </script>";
       
       }
