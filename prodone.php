@@ -168,6 +168,18 @@ min-width: 100px;
 				</div>
 
 			</div>
+      <div class="col col-3 vincent_header_right">
+				<div class="vincent_inner">
+					<a href="profile.php" style="font:28px 'PT Sans Narrow', sans-serif">
+						<!-- <div class="vincent_shopping_cart">
+							<div class="vincent_total_price">$0.00</div>
+							<div class="vincent_total_items">0 items - View Cart</div>
+							<div class="vincent_cart_item_counter">0</div>
+						</div> -->
+					</a>
+					<form><li class="menu-item" ><a href="backend/logout.php"> Logout </a></li></form>
+				</div>
+			</div>
 			
 		</div>
 	</header>

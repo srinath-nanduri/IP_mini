@@ -23,6 +23,33 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5G6PPWB');</script>
   <!-- End Google Tag Manager -->
+  <style>
+	  @keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(75%);
+  }
+  50%{
+	  transform: translateX(-50%);
+  }
+  75%{
+	  transform: translateX(25%);
+  }
+  100%{
+	  transform: translateX(0);
+  }
+}
+
+.an {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 3s ease-out 0s 1 slideInFromLeft;
+  
+  /* background: #333; */
+  /* padding: 30px; */
+}
+  </style>
 </head>
 <body class="vincent_home6 vincent_home1" >
 	<header class="vincent_header" style="padding-top:-450px">
@@ -179,7 +206,7 @@
 					<div class="vincent_slider_main_item vincent_slider_main_item1 vincent_slider_main_item2 vincent_slider_main_item3">
 						<img src="assets/photo-1513104890138-7c749659a591.jpeg" alt="">
 						<div class="vincent_slider_main_item_cont">
-							<div class="vincent_item_cont">
+							<div class="vincent_item_cont an">
 							<h2>Making people happy </h2>
 							<h1>The Limitless</h1>
 							<div class="vincent_slider_main_item_text">Make your own Pizza </div>

@@ -17,7 +17,7 @@ if(isset($_SESSION["user"])){
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>The Limitless</title>
+	<title>Toppings-The Limitless</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/kube.css">
 	<!-- <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/font-awesome.css"> -->
@@ -144,16 +144,17 @@ if(isset($_SESSION["user"])){
 					</a>
 				</div>
 			</div>
-			<div class="col col-3 vincent_header_right" >
+			
+			<div class="col col-3 vincent_header_right">
 				<div class="vincent_inner">
-					<a href="profile.html">
-						 Welcome, <?php echo $_SESSION['user']; ?>
+					<a href="profile.php" style="font:28px 'PT Sans Narrow', sans-serif">
+						Welcome, <?php echo $_SESSION['user']; ?>
 					</a>
 					<form><li class="menu-item" ><a href="backend/logout.php"> Logout </a></li></form>
 				</div>
 			</div>
-			
 		</div>
+		
 	</header>
 	<div class="vincent_title_block vincent_corners">
 		<div class="vincent_inner_text">
@@ -222,7 +223,7 @@ if(isset($_SESSION["user"])){
 
 
 
-		<table style="width: 85.4%; float: left;" >
+		<table style="width: 85.4%; " >
 			<tr>
 				<td class="thead1" >Veg</td>
 				<td class="thead1" >Non Veg</td>
