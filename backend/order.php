@@ -58,10 +58,11 @@ if ($conn->connect_error) {
     $cheeseamt = $row["m_price"];
 
     $total = $sizeamt+$crustamt+$sauceamt+$cheeseamt;
+    $date = date('Y-m-d');
 
 
-    $stmt = $conn->prepare("insert into menuorder( o_user, o_pizza, o_cost, o_size, o_crust, o_sauce, o_cheese) values(?,?,?,?,?,?,?) ");
-    $stmt->bind_param("ssdssss",$user, $name, $total, $size, $crust, $sauce, $cheese);
+    $stmt = $conn->prepare("insert into menuorder( o_user, o_pizza, o_cost, o_date, o_size, o_crust, o_sauce, o_cheese) values(?,?,?,?,?,?,?,?) ");
+    $stmt->bind_param("ssdsssss",$user, $name, $total, $date, $size, $crust, $sauce, $cheese);
     $stmt->execute();
 
 

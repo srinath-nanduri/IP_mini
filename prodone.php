@@ -33,9 +33,6 @@ if(isset($_SESSION["user"])){
 		$res = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($res);
 
-
-
-		
 	
 	
 
@@ -112,7 +109,35 @@ min-width: 100px;
 	/* display:none; */
 }
   </style>
-  <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+
+$('.vincent_product-remove').click(function() {
+removeItem(this);
+});
+
+
+
+
+/* Remove item from cart */
+function removeItem(removeButton) {
+/* Remove row from DOM and recalc cart total */
+var productRow = $(removeButton).parent().parent().parent();
+
+productRow.remove();
+e = $('removeform<?php echo $key ?>');
+e.currentTarget.submit();
+
+
+}
+
+});
+</script>
+
 </head>
 
 <body>
@@ -149,7 +174,7 @@ min-width: 100px;
 							</li>
 							
 							
-							<li class="menu-item menu-item-has-children"><a href="feedback.html">Contact</a>
+							<li class="menu-item menu-item-has-children"><a href="orderpage.php">Order</a>
 								
 							</li>
 						</ul>
@@ -193,7 +218,7 @@ min-width: 100px;
 			<div class="grid1">
 				<div class="grid-item">
 					<div class="vincent_blog_grid_item">
-						<a href="standard-post.html"><h4 class="vincent_blog_grid_title"><?php echo $row['r_name'];?></h4></a>
+						<a href="#"><h3 class="vincent_blog_grid_title"><?php echo $row['r_name'];?></h3></a>
 						<div class="vincent_meta">
 							
 							
@@ -204,11 +229,59 @@ min-width: 100px;
 						<p class="vincent_excerpt"><?php echo $bio;?></p>
 					</div>
         </div>
-        <form action="backend/change.php" method="POST" class="signup-form vincent_form1">
+        <!-- <form action="backend/change.php" method="POST" class="signup-form vincent_form1"> -->
+
+
+
+
+
+
         <div class="grid-item">
-          &nbsp;
+          <!-- &nbsp; -->
+         <h3 class="vincent_blog_grid_title" style="color:#dce4e8;">Saved Items</h3>
+          <!--  <fieldset> -->
+          <!-- <legend>Saved Items</legend> -->
+         
+          <!-- </fieldset> --> 
+          <table>
+          <thead>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          </thead>
+          <tbody>
+          
+                <?php
+                $count=1;
+                $date = date('Y-m-d');
+                $sql = "select o_pizza from menuorder where o_save=1 and o_user='$user' and o_date='$date';";
+                $res = mysqli_query($conn,$sql);
+                while($row = mysqli_fetch_assoc($res)) { ?>
+            <tr>
+            <td class="vincent_blog_grid_title" style="float:left;"><big><big><big><?php echo $row['o_pizza']; ?></big></big></big></td>
+            <td>
+
+            <form action="backend/removesave.php" id="removeform<?php echo $count ?>" method="POST">
+								<input type="hidden" value="<?php echo $row['o_pizza']; ?>" name="rem<?php echo $count ?>" />
+								<input type="submit" id="removeit<?php echo $count ?>"  style="float:left;" class="vincent_product-remove" style=" color:tomato; font-size:x-large;" value='×'/>
+								</form>
+            
+            </td>
+            </tr>
+            <?php $count++;
+          $_SESSION['max'] = $count;
+          } ?>
+          </tbody>
+
+          </table>
+
         </div>
+
+
+
+
+        <form action="backend/change.php" method="POST" class="signup-form vincent_form1">
 			<div class="grid-item">
+      <h3 class="vincent_blog_grid_title">Info</h3>
         <div class="main" >
 
           <div class="container1" style="padding-bottom:30px;" >

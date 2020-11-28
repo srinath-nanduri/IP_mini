@@ -334,8 +334,18 @@ recalculateCart();
 									<button>Apply coupon</button>
 								</div>
 							<a href="orderpage.php">	<button class="vincent_update_cart">Add a Pizza</button></a>
+							<p></p>
+							<form action="backend/saveto.php" method="POST">
+								<input type="submit" value="Save for Store" name="save" style="float:right;"/>
+							</form>
 							</td>
 						</tr>
+						
+						<tr>
+						<td>
+							
+							</td>
+							</tr>
 					</tbody>
 				</table>
 				<div class="vincent_cart_totals">
@@ -376,7 +386,8 @@ recalculateCart();
 							</tr>
 						</tbody>
 					</table>
-					<a class="vincent_button vincent_button_background" href="checkout.html">Proceed to checkout</a>
+
+					<a class="vincent_button vincent_button_background" href="#">Save for Store</a>
 					<div id="paypal-button-container"></div>
 
 <!-- <script>

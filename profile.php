@@ -50,7 +50,7 @@ if(isset($_SESSION["user"])){
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title><?php echo $row['r_name'];?>, Profile</title>
+	<title><?php echo $user;?>, Profile</title>
 
 	<link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/kube.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
