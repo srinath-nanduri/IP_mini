@@ -22,7 +22,7 @@ if(isset($_SESSION["user"])){
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Pizza-The Limitless</title>
+	<title>Pizza Base -The Limitless</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/kube.css">
 	<!-- <link rel="stylesheet"  href="https://demo-storage.com/pm/html/vincent/css/font-awesome.css"> -->
@@ -78,22 +78,9 @@ if(isset($_SESSION["user"])){
 								</div>
 							</li>
 							<li class="menu-item menu-item-has-children"><a href="c.html">Home</a>
-								<!-- <ul class="sub-menu">
-									<li class="menu-item"><a href="index.html">Home 1</a></li>
-									<li class="menu-item"><a href="home2.html">Home 2</a></li>
-									<li class="menu-item"><a href="home3.html">Home 3</a></li>
-									<li class="menu-item"><a href="home4.html">Home 4</a></li>
-									<li class="menu-item"><a href="home5.html">Home 5</a></li>
-									<li class="menu-item"><a href="home6.html">Home 6</a></li>
-								</ul> -->
+								
 							</li>
-							<!-- <li class="menu-item menu-item-has-children"><a href="#">Menu</a>
-								<ul class="sub-menu">
-									<li class="menu-item"><a href="menu1.html">Menu 1</a></li>
-									<li class="menu-item"><a href="menu2.html">Menu 2</a></li>
-									<li class="menu-item"><a href="menu3.html">Menu 3</a></li>
-								</ul>
-							</li> -->
+							
 							<li class=" menu-item menu-item-has-children"><a href="#">Features</a>
 								<ul class="sub-menu">
 									<!-- <li class="menu-item "><a href="typography.html">Typography</a></li> -->
@@ -103,7 +90,7 @@ if(isset($_SESSION["user"])){
 							</li>
 							<li class="menu-item menu-item-has-children"><a href="#">About</a>
 								<ul class="sub-menu">
-									<li class="menu-item"><a href="about1.html">Customer Review</a></li>
+									<li class="menu-item"><a href="about1.html">Error</a></li>
 									<li class="menu-item "><a href="teams.html">Team</a></li>
 								</ul>
 							</li>
@@ -111,11 +98,7 @@ if(isset($_SESSION["user"])){
 							<li class="menu-item menu-item-has-children"><a href="cart.php">Cart</a>
 
 							<li class="menu-item menu-item-has-children"><a href="feedback.html">Contact</a>
-								<!-- <ul class="sub-menu">
-									<li class="menu-item"><a href="contact-w-sidebar.html">Contact with Sidebar</a></li>
-									<li class="menu-item"><a href="contact-w-gallery.html">Contact with Gallery</a></li>
-									<li class="menu-item"><a href="contact-multiple-maps.html">With Multiple Maps</a></li>
-								</ul> -->
+								
 							</li>
 						</ul>
 					</nav>
@@ -172,45 +155,11 @@ if(isset($_SESSION["user"])){
         </div>
       </div>
 </div>
-<!-- <div class="vincent_collapse_block"> -->
-  <!-- <div class="vincent_container">
-    <div class="row gutters" style=" padding-left: 20%;">
-      <div class="col col-8">
-        <div class="vincent_collapse" data-component="collapse">
 
-          <h4><a href="#box-1" class="collapse-toggle">Our Philosophy<i class="fa fa-angle-down" aria-hidden="true"></i></a></h4>
-          <div class="collapse-box " id="box-1">
-            <p>What’s our purpose at Vincent? <a href="#">Moments of Excitement.</a> All made possible by our flavor, innovation and, most importantly, by unlocking potential in our team members.</p>
-            <p>With more than 50 years of experience under our belts, we understand how to best serve our customers through tried and true service principles. Instead of following trends, <strong>we set them</strong>. We create food we’re proud <em>to serve and deliver</em> it fast, with a smile. No matter where you find us, we’re making sure each meal our customers enjoy is delicious and one-of-a-kind.</p>
-          </div>
-
-          <h4><a href="#box-2" class="collapse-toggle">Our Purpose<i class="fa fa-angle-down" aria-hidden="true"></i></a></h4>
-          <div class="collapse-box hide" id="box-2">
-            <p>What’s our purpose at Vincent? <a href="#">Moments of Excitement.</a> All made possible by our flavor, innovation and, most importantly, by unlocking potential in our team members.</p>
-            <p>With more than 50 years of experience under our belts, we understand how to best serve our customers through tried and true service principles. Instead of following trends, <strong>we set them</strong>. We create food we’re proud <em>to serve and deliver</em> it fast, with a smile. No matter where you find us, we’re making sure each meal our customers enjoy is delicious and one-of-a-kind.</p>
-          </div>
-
-          <h4><a href="#box-3" class="collapse-toggle">Best Service<i class="fa fa-angle-down" aria-hidden="true"></i></a></h4>
-          <div class="collapse-box hide" id="box-3">
-            <p>What’s our purpose at Vincent? <a href="#">Moments of Excitement.</a> All made possible by our flavor, innovation and, most importantly, by unlocking potential in our team members.</p>
-            <p>With more than 50 years of experience under our belts, we understand how to best serve our customers through tried and true service principles. Instead of following trends, <strong>we set them</strong>. We create food we’re proud <em>to serve and deliver</em> it fast, with a smile. No matter where you find us, we’re making sure each meal our customers enjoy is delicious and one-of-a-kind.</p>
-          </div>
-
-        </div>
-      </div>
-
-
-
- </div>
-
-
- 
-</div> -->
 <br>
 <div class="vincent_container">
 	<form action="backend/order.php" method="POST" class="lalala">
-		<!-- <input type="text" placeholder="HIiiiiiiiiiiiiii" required>
-		<textarea></textarea> --><br>
+		<br>
 		<h1 style="text-align: center;">Choose your options!</h1>
 	<div class="new" style="width: fit-content; margin: 0 auto;">
 		<label class="same">
@@ -261,13 +210,7 @@ if(isset($_SESSION["user"])){
 			<p>INR</p>
 		</label>
 	</div>
-	<!-- <br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br> -->
+	
 	<div class="new">
 		<label class="same">
 			<input type="radio" name="sauceradio" value="nosauce" checked>
@@ -413,10 +356,10 @@ $(".same input[name='sauceradio']").click(function(){
 					<div class="vincent_foter_text">+91 9345678765 <span>8:00 am – 11:30 pm</span></div>
 					<ul class="vincent_foter_menu">
 						<li><a href="c.html">Home</a></li>
-						<!-- <li><a href="menu1.html">Menu</a></li> -->
+				
 						<li><a href="gal.html">Features</a></li>
-						<li><a href="about1.html">About</a></li>
-						<!-- <li><a href="blog-grid.html">Blog</a></li> -->
+						<li><a href="teams.html">About</a></li>
+					
 						<li><a href="feedback.html">Contact</a></li>
 					</ul>
 					<ul class="vincent_social">
@@ -424,7 +367,7 @@ $(".same input[name='sauceradio']").click(function(){
 						<li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 					</ul>
-					<div class="vincent_copy_text">Copyright © 2018 Limitless. All Rights Reserved.</div>
+					<div class="vincent_copy_text">Copyright © 2020 Limitless. All Rights Reserved.</div>
         </div>
   
 			</div>

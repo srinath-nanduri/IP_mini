@@ -21,7 +21,8 @@ if(isset($_SESSION["user"])){
 	
 	
 	   else{
-		$user = $_SESSION['user'];
+    $user = $_SESSION['user'];
+    $l = strlen($user);
 		$sql = "select * from profile WHERE p_user='$user' ";
 		$res = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($res);
@@ -257,7 +258,7 @@ e.currentTarget.submit();
                 $res = mysqli_query($conn,$sql);
                 while($row = mysqli_fetch_assoc($res)) { ?>
             <tr>
-            <td class="vincent_blog_grid_title" style="float:left;"><big><big><big><?php echo $row['o_pizza']; ?></big></big></big></td>
+            <td class="vincent_blog_grid_title" style="float:left;"><big><big><big><?php echo substr($row['o_pizza'],$l);?></big></big></big></td>
             <td>
 
             <form action="backend/removesave.php" id="removeform<?php echo $count ?>" method="POST">
@@ -508,13 +509,13 @@ $("#div2").scroll(function () {
 						<a href="index.html" class="vincent_image_logo_footer">
 						</a>
 					</div>
-					<div class="vincent_foter_text">+1 215 456 15 15. <span>8:00 am – 11:30 pm</span></div>
+					<div class="vincent_foter_text">+91 9345678765. <span>8:00 am – 11:30 pm</span></div>
 					<ul class="vincent_foter_menu">
 						<li><a href="c.html">Home</a></li>
-						<li><a href="menu1.html">Menu</a></li>
+			
 						<li><a href="gal.html">Features</a></li>
-						<li><a href="about1.html">About</a></li>
-						<li><a href="blog-grid.html">Blog</a></li>
+						<li><a href="teams.html">About</a></li>
+				
 						<li><a href="feedback.html">Contact</a></li>
 					</ul>
 					<ul class="vincent_social">
@@ -522,7 +523,7 @@ $("#div2").scroll(function () {
 						<li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 					</ul>
-					<div class="vincent_copy_text">Copyright © 2018 Vincent. All Rights Reserved.</div>
+					<div class="vincent_copy_text">Copyright © 2020 Limitless. All Rights Reserved.</div>
 				</div>
 			</div>
 		</div>
